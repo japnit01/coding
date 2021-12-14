@@ -1,0 +1,1 @@
+{"name":"Local: 1","url":"c:\\Users\\japni\\Desktop\\coding\\1.cpp","tests":[{"id":1628784637347,"input":"4\nnice\nniece\ncrow\ncow\nbeans\nbanes\no\nodd","output":"INSERT e\nREMOVE r\nMOVE e\nIMPOSSIBLE"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\japni\\Desktop\\coding\\1.cpp","group":"local","local":true}
