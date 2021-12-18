@@ -1,16 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool check(int a,int n)
+int gcd(int a,int b)
 {
-    for(int i=2;i<=n;i++)
-    {
-        if(a%i != 0)
-        {
-            return true;
-        }
-    }
-    return false;
+  if (b == 0)
+    return a;
+  return gcd(b, a % b);
+}
+
+int lcm(int a,int b)
+{
+    // cout<<gcd(a,b)<<" ";
+    return a * b / gcd(a, b) ;
 }
 
 void solve()
@@ -24,16 +25,25 @@ void solve()
     {
         cin>>A[i];
     }
-
-    for(int i = n-1;i>=0;i--)
+    
+    long long x = 1;
+    for(int i=0;i<n;i++)
     {
-        if(!check(A[i],i+1))
+        if(x > 1e9)
         {
-            // cout<<A[i]<<" "<<i+1<<"\n";
+            break;
+        }
+
+        x = lcm(x,i+2);
+        
+        if((A[i] % x) == 0)
+        {
+            // cout<<A[i]<<" "<<x<<" "; 
             cout<<"NO\n";
             return;
         }
-    }    
+    }
+
     cout<<"YES\n";
     return;
 }
@@ -48,3 +58,5 @@ int main()
         solve();
     }
 }
+
+
