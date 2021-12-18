@@ -1,1 +1,0 @@
-{"name":"Local: reformat_text","url":"c:\\Users\\japni\\Desktop\\coding\\reformat_text.cpp","tests":[{"id":1628402051772,"input":"5\n2\nHello how are you","output":"Hello    are\nhow    you"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\japni\\Desktop\\coding\\reformat_text.cpp","group":"local","local":true}
