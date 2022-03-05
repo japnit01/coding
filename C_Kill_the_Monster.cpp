@@ -4,9 +4,13 @@ typedef long long ll;
 #define all(x) x.begin(), x.end()
 #define vi vector<int>
 
+
 void solve() 
 {
+    int hc,dc,hm,dm,k,w,a;
+    cin>>hc>>dc>>hm>>dm>>k>>w>>a;
 
+    
 }
 
 int main()

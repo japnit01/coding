@@ -6,7 +6,23 @@ typedef long long ll;
 
 void solve() 
 {
+    int a,b;
+    cin>>a>>b;
+    int count = a;
+    int x = 0;
+    for(int i=1;i<a;i++)
+    {
+        x = x ^ i;
+    }
 
+    while(x != b)
+    {
+        x = x ^ a+1;
+        a++;
+        count++;
+    }
+
+    cout<<count;
 }
 
 int main()

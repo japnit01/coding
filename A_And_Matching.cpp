@@ -4,9 +4,10 @@ typedef long long ll;
 #define all(x) x.begin(), x.end()
 #define vi vector<int>
 
+
 void solve() 
 {
-
+      
 }
 
 int main()
@@ -21,3 +22,7 @@ int main()
         cout<<"\n";
     }
 }
+
+
+
+

@@ -1,11 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-#define all(x) x.begin(), x.end()
-#define vi vector<int>
 
 void solve() 
 {
+    int a,b;
+    cin>>a>>b;
+
+    cout<<(a ^ b);
+    
 
 }
 
