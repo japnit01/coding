@@ -4,29 +4,54 @@ typedef long long ll;
 #define all(x) x.begin(), x.end()
 #define vi vector<int>
 
-void rotateleft()
+void rotateleft(vector<int>& A,int d,int n)
+{
+    vector<int> temp(n);
+    for(int i=0;i<n;i++)
+    {
+
+        // cout<<i << " "<<(i+d-2)%n<<"\n";
+        temp[(i+d-2)%n] = A[i];
+    }
+
+    for(int i = 0 ;i<n;i++)
+    {
+        A[i] = temp[i];
+    }
+}
 
 void solve() 
 {
     int n;
     cin>>n;
 
-    vector<int> A(n);
+    deque<int> q;
+    vector<int> A(n),ans(n);
     for(int i=0;i<n;i++){
         cin>>A[i];
+        A[i]--;
+        q.push_back(A[i]);
     }
 
-    vector<int> B(n);
-    for(int i=n;i>0;i--)
+    for(int i = n-1;i>=0;i--)
     {
-        for(int j=0;j<n;j++)
+        while(q.back() != i)
         {
-            if(A[j] == i)
-            {
-                n-
-            }
+            int temp = q.front();
+            q.pop_front();
+            q.push_back(temp);
+            ans[i]++;
         }
+
+        q.pop_back();
     }
+
+        for(int i=0;i<n;i++)
+        {
+            cout<<ans[i]<<" ";
+        }
+        // cout<<"\n";
+   
 }
 
 int main()

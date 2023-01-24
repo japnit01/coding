@@ -28,7 +28,17 @@ void solve()
             if(A[i][j] == '*' || vis[i][j] == false)
             {
                 int len = 0;
-                while()
+                while(j > len && j+len+1<m && i>len)
+                {
+                    if(A[i - len - 1][j - len- 1] == '.' ||A[i - len - 1][j + len + 1] == '.')
+                    {
+                        break;
+                    }
+
+                    len++;
+                }
+
+                
             }
         }
     }
